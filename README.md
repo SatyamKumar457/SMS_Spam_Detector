@@ -1,6 +1,6 @@
 # 📩 SMS Spam Detector
 
-A **machine learning–powered web application** that classifies SMS messages as **Spam** or **Ham (Not Spam)**.  
+A **NLP & Machine learning–powered web application** that classifies SMS messages as **Spam** or **Ham (Not Spam)**.  
 Built using **Python**, **scikit-learn**, and **Streamlit**, and trained on a real-world dataset from Kaggle.
 
 🚀 **Live App:**  
@@ -11,7 +11,7 @@ Built using **Python**, **scikit-learn**, and **Streamlit**, and trained on a re
 ## 🧠 Project Overview
 
 Spam messages are a real problem—annoying at best, dangerous at worst.  
-This project applies **Machine Learning** to automatically detect spam SMS messages.
+This project applies **NLP & Machine Learning** to automatically detect spam SMS messages.
 
 The model is trained on labeled SMS data and deployed as an interactive web app where users can test messages in real time.
 
