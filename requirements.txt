@@ -1,4 +1,4 @@
-Python
+Python3.12
 Pandas
 Numpy
 scikit-learn
