@@ -98,6 +98,16 @@ The model is trained on labeled SMS data and deployed as an interactive web app 
 - **Deployment:** Streamlit Cloud  
 
 ---
+## ⚙️ Work Flow
+ 1. Data Cleaning
+ 2. Exploratory Data Analysis(EDA)
+ 3. Text Preprocessing
+ 4. Model Building
+ 5. Evalution
+ 6. Improvement
+ 7. Website
+ 8. Deployment
+---
 
 ## 🧪 Model Pipeline
 
@@ -119,6 +129,7 @@ Saved files:
 SMS_Spam_Detector/
 │
 ├── Data/                      # Dataset files
+├── EDA/                       # Graphs & Plots
 ├── app.py                     # Streamlit web app
 ├── sms_spam_detection.ipynb   # Model training & analysis
 ├── model.pkl                  # Trained ML model
