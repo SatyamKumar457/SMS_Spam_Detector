@@ -1,3 +1,6 @@
+pip
 python==3.12
 nltk==3.9.2
 streamlit==1.52.2
+pickle 
+string
