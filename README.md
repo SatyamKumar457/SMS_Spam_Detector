@@ -24,6 +24,39 @@ The model is trained on labeled SMS data and deployed as an interactive web app 
 - **Link:** https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset  
 - **Size:** 5,572 SMS messages  
 - **Classes:** `spam`, `ham`
+---
+
+## 📊 Graphs & Plots
+
+<table>
+  <tr>
+    <td><img src="EDA/SpamVsHamPie.png" width="750"><H2>Spam VS Ham Pie Chart</H2></td>
+    <td><img src="EDA/NumCharCount.png" width="750"><H2>Numbers & Character Count</H2></td>
+    
+  </tr>
+    <tr>
+    <td><img src="EDA/NumWordsCount.png" width="750"><H2>Numbers & Words Count</H2></td>
+    <td><img src="EDA/NumSentencesCount.png" width="750"><H2>Numbers & Sentences Count</H2></td>
+    
+  </tr>
+    </tr>
+    <tr>
+    <td><img src="EDA/CorrNumCharWordsSentence.png" width="750"><H2>Correlation Between all the Columns</H2></td>
+    <td><img src="EDA/HeatMapoftheCol.png" width="750"><H2>Heatmap of all the Columns</H2></td>
+    
+  </tr>
+      <tr>
+    <td><img src="EDA/Top30WordsinSpam.png" width="750"><H2>Top Most Occuring Words in Spam</H2></td>
+    <td><img src="EDA/WordCloudofSpam.png" width="750"><H2>World Cloud Of Spam</H2></td>
+    
+  </tr>
+        <tr>
+    <td><img src="EDA/Top30WordsinHam.png" width="750"><H2>Top Most Occuring Words in Ham</H2></td>
+    <td><img src="EDA/WordCloudofHam.png" width="750"><H2>World Cloud Of Ham</H2></td>
+    
+  </tr>
+</table>
+
 
 ---
 ## 📊 Model Performance Summary
@@ -34,7 +67,7 @@ The model is trained on labeled SMS data and deployed as an interactive web app 
 | Multinomial Naive Bayes | CountVectorizer       | 83.44%          | 96.42%         |
 | Bernoulli Naive Bayes | CountVectorizer       | 97.34%          | 97%         |
 | Gaussian Naive Bayes | TfidVectorizer       | 52.31%          | 87.62%         |
-| **Multinomial Naive Bayes** | TfidVectorizer       | 100%          | 95.93%         |
+| **Multinomial Naive Bayes** | **TfidVectorizer**       | **100%**          | **95.93%**         |
 | Bernoulli Naive Bayes | TfidVectorizer       | 97.34%          | 97%         |
 | SVC | TfidVectorizer       | 97.41%          | 97.29%         |
 | KNeighborsClassifier | TfidVectorizer       | 100%          | 90.03%         |
