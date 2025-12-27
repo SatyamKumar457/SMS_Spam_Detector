@@ -11,7 +11,7 @@ Built using **Python**, **scikit-learn**, and **Streamlit**, and trained on a re
 ## 🧠 Project Overview
 
 Spam messages are a real problem—annoying at best, dangerous at worst.  
-This project applies **Natural Language Processing (NLP)** and **Machine Learning** to automatically detect spam SMS messages.
+This project applies **Machine Learning** to automatically detect spam SMS messages.
 
 The model is trained on labeled SMS data and deployed as an interactive web app where users can test messages in real time.
 
@@ -24,6 +24,67 @@ The model is trained on labeled SMS data and deployed as an interactive web app 
 - **Link:** https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset  
 - **Size:** 5,572 SMS messages  
 - **Classes:** `spam`, `ham`
+
+---
+## 📊 Model Performance Summary
+
+| Model                | Vectorization | Precision Score | Accuracy Score |
+|----------------------|---------------|-----------------|----------------|
+| Gaussian Naive Bayes | CountVectorizer       | 53.15%          | 88%         |
+| Multinomial Naive Bayes | CountVectorizer       | 83.44%          | 96.42%         |
+| Bernoulli Naive Bayes | CountVectorizer       | 97.34%          | 97%         |
+| Gaussian Naive Bayes | TfidVectorizer       | 52.31%          | 87.62%         |
+| **Multinomial Naive Bayes** | TfidVectorizer       | 100%          | 95.93%         |
+| Bernoulli Naive Bayes | TfidVectorizer       | 97.34%          | 97%         |
+| SVC | TfidVectorizer       | 97.41%          | 97.29%         |
+| KNeighborsClassifier | TfidVectorizer       | 100%          | 90.03%         |
+| DecisionTreeClassifier | TfidVectorizer       | 83.01%          | 93.42%         |
+| LogisticRegression | TfidVectorizer       | 94%          | 95.16%         |
+| RandomForestClassifier | TfidVectorizer       | 100%          | 97.19%         |
+| AdaBoostClassifier | TfidVectorizer       | 84.09%          | 92.45%         |
+| BaggingClassifier | TfidVectorizer       | 86.25%          | 95.84%         |
+| ExtraTreesClassifier | TfidVectorizer       | 98.24%          | 97.29%         |
+| GradientBoostingClassifier | TfidVectorizer       | 92.38%          | 95.26%         |
+| XGBClassifier | TfidVectorizer       | 95.16%          | 97.48%         |
+
+---
+## 📊 Model Improvement
+
+1. Changing the **max_features parameter of TfidfVectorizer**
+
+    - **Best Param** Max_features = 3000
+   
+    - Using with **Multinomial Naive Bayes**
+   
+    - Precision Score :- 100%
+   
+    - Accuracy Score :- 97.09%
+
+2. Scaling the Data using **MinMaxScaler**
+
+    - Using with **Multinomial Naive Bayes**
+   
+    - Precision Score :- 94.61%
+   
+    - Accuracy Score :- 97.87%
+
+3. Using **Voting Classifier**
+
+    - Using with **SVC** , **Multinomial Naive Bayes** , **ExtraTreesClassifier**
+      
+    - Precision Score :- 96.82%
+   
+    - Accuracy Score :- 98.06%
+
+---
+
+## ✔️ Final Model Selected (model.pkl)
+
+  **TfidfVectorizer** With **Max_features = 3000** with **Multinomial Navie Bayes**
+  
+  - Precision Score :- 100%
+   
+  - Accuracy Score :- 97.09%
 
 ---
 
@@ -65,3 +126,53 @@ SMS_Spam_Detector/
 ├── requirements.txt           # Project dependencies
 ├── README.md                  # Project documentation
 └── LICENSE                    # License file
+```
+# ▶️ How to Run Locally
+
+## 1️⃣ Clone the repository
+
+```text
+git clone https://github.com/SatyamKumar457/SMS_Spam_Detector.git
+cd SMS_Spam_Detector
+```
+
+## 2️⃣ Install dependencies
+
+```text
+pip install -r requirements.txt
+```
+## 3️⃣ Run the Streamlit app
+
+```text
+streamlit run app.py
+
+```
+## 🖥️ Web App Features
+
+- 📝 Enter any SMS message
+
+- ⚡ Instant prediction
+
+- ✅ Clear Spam / Not Spam output
+
+- 🌐 Deployed and accessible online
+
+## 📈 Results
+
+The trained model achieves strong accuracy on unseen data and performs well for real-world SMS classification tasks.
+
+This project focuses on practical deployment, not just notebook accuracy.
+
+## 👤 Author
+
+**Satyam Kumar**
+
+- **GitHub:** https://github.com/SatyamKumar457
+  
+- **LinkIn:** https://www.linkedin.com/in/satyam-kumar-a01959326/
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+Feel free to use, modify, and distribute.
