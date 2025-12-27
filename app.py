@@ -16,6 +16,10 @@ st.title("SMS Spam Detection")
 input_sms = st.text_area("Enter the message", key='my_input')
 
 
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+nltk.download('punkt_tab')
 
 
 
