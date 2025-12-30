@@ -171,6 +171,11 @@ st.markdown(f"""
     padding : 0 12px 0 12px;
     margin-top:20px;
 }}
+            
+[data-testid="stTextAreaRootElement"]{{
+            padding-bottom: 50px;
+}}
+
 @media (max-width: 768px) {{
     [data-testid="stVerticalBlock"] {{
         width: 70%;
