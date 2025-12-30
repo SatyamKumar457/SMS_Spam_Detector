@@ -12,8 +12,6 @@ ps = PorterStemmer()
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
-# SnowFlakes elements
-
 for i in range(300):
     left = random.randint(0, 100)
     size = random.randint(2, 6)
@@ -99,7 +97,7 @@ if st.button('Predict'):
         st.header("Not Spam")
 
 
-# CSS styling
+
 
 st.markdown(f"""
 <style>
@@ -173,7 +171,18 @@ st.markdown(f"""
     padding : 0 12px 0 12px;
     margin-top:20px;
 }}
-
+@media (max-width: 768px) {{
+    [data-testid="stVerticalBlock"] {{
+        width: 70%;
+        margin: 80px auto 60px auto; /* auto = center */
+        padding: 20px 18px;
+        
+    }}
+    .snowflake {{
+        display: none !important;
+        animation: none !important;
+    }}
+}}
             
 </style>
             
